@@ -172,13 +172,11 @@ curl -sL https://run.linkerd.io/emojivoto.yml \
   | kubectl apply -f -
 ```
 
-You can take a look at this by forwarding the `web` pod to localhost and looking
-at the app in your browser. To forward `web` locally to port 8080, you can run:
+You can take a look at this by forwarding the `web-svc` service to localhost and
+looking at the app in your browser. To forward `web-svc` to localhost:8080, run:
 
 ```bash
-kubectl -n emojivoto port-forward \
-  $(kubectl -n emojivoto get po -l app=web-svc -oname | cut -d/ -f 2) \
-  8080:80
+kubectl -n emojivoto port-forward svc/web-svc 8080:80
 ```
 
 You might notice that some parts of the application are broken! If you were to
