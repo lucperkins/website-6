@@ -6,10 +6,10 @@ keys:
   default: true
 - key: image-pull-policy
   default: Always
-- key: init-image
-  default: gcr.io/linkerd-io/proxy-init
 - key: inbound-port
   default: 5000
+- key: init-image
+  default: gcr.io/linkerd-io/proxy-init
 - key: metrics-port
   default: 5001
 - key: outbound-port
