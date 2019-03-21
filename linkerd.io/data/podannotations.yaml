@@ -1,0 +1,34 @@
+prefix: config.linkerd.io
+keys:
+- key: control-port
+  default: 4000
+- key: disable-external-profiles
+  default: true
+- key: image-pull-policy
+  default: Always
+- key: init-image
+  default: gcr.io/linkerd-io/proxy-init
+- key: inbound-port
+  default: 5000
+- key: metrics-port
+  default: 5001
+- key: outbound-port
+  default: 5002
+- key: proxy-cpu-limit
+  default: 1.5
+- key: proxy-cpu-request
+  default: 0.5
+- key: proxy-image
+  default: gcr.io/linkerd-io/proxy
+- key: proxy-memory-limit
+  default: 256Mi
+- key: proxy-memory-request
+  default: 64Mi
+- key: proxy-uid
+  default: 8500
+- key: proxy-log-level
+  default: debug,linkerd2_proxy=debug
+- key: skip-inbound-ports
+  default: 4222,6222
+- key: skip-outbound-ports
+  default: 8079,8080
