@@ -1,5 +1,5 @@
 serve:
-	hugo \
+	hugo server \
 	--buildDrafts \
 	--buildFuture
 
