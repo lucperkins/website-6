@@ -15,8 +15,10 @@ keys:
 - key: outbound-port
   default: 5002
 - key: proxy-cpu-limit
+  flag: false
   default: 1.5
 - key: proxy-cpu-request
+  flag: false
   default: 0.5
 - key: proxy-image
   default: gcr.io/linkerd-io/proxy

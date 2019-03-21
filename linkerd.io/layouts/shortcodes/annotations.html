@@ -24,7 +24,9 @@
         <code>{{ $annotation }}</code>
       </td>
       <td>
+        {{ if ne .flag false }}
         <code>--{{ .key }}</code>
+        {{ end }}
       </td>
       <td>
         <code>"{{ $default }}"</code>
