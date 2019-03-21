@@ -41,3 +41,7 @@ linkerd dashboard
 
 For more information on how the inject command works and all of the parameters
 that can be set, look at the [reference](/2/reference/cli/inject/).
+
+## Override Pod annotations
+
+{{< annotations >}}

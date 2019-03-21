@@ -1,0 +1,35 @@
+{{ $anns   := site.Data.podannotations }}
+{{ $prefix := $anns.prefix }}
+{{ $keys   := $anns.keys }}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Annotation
+      </th>
+      <th>
+        Corresponding <code>linkerd inject</code> flag
+      </th>
+      <th>
+        Default
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $keys }}
+    {{ $annotation  := printf "%s/%s" $prefix .key }}
+    {{ $default     := .default }}
+    <tr>
+      <td>
+        <code>{{ $annotation }}</code>
+      </td>
+      <td>
+        <code>--{{ .key }}</code>
+      </td>
+      <td>
+        <code>"{{ $default }}"</code>
+      </td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
