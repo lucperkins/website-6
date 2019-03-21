@@ -1,3 +1,8 @@
+serve:
+	hugo \
+	--buildDrafts \
+	--buildFuture
+
 production-build:
 	hugo --minify
 
